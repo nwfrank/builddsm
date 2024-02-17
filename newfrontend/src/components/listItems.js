@@ -7,9 +7,9 @@ class ListItem extends React.Component {
         <div className='item-holder'>
             <p className='asdf'>Common Names: {this.props.commonNames}</p>
             <p className='asdf'>Active Ingredients: {this.props.activeIng}</p>
-            <p className='asdf'>Indicators: {this.props.indicators}</p>
-            this.props.indicators
+            <div className='asdf' dangerouslySetInnerHTML={{__html:this.props.indicators}}/>
             <p className='asdf'>PDF: {this.props.pdf}</p>
+            <button>See more</button>
         </div>
       );
     }
