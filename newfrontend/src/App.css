@@ -12,3 +12,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+button {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+label {
+  margin: 20px;
+}

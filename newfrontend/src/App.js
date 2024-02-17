@@ -27,13 +27,28 @@ function App() {
         <h1>Farm-aceutical Fix</h1>
         <p>The expert on everything veterinary pharmacy.</p>
 
-            <label htmlFor="search">Lookup Number </label>
-            <input onChange={event => setLookupNum(event.target.value)} type="text" id="search" autoFocus name="search"/>
+        <table>
+            <tr>
+              <td>
+                <label htmlFor="search">Lookup Number </label>
+              </td>
+              <td>
+                <input type="text" id="search" autoFocus name="search"/>
+              </td>
+            </tr>
 
-
-            <label htmlFor="search">Medication Name </label>
-            <input type="text" id="search" name="search" onChange={event => setMedName(event.target.value)}/>
-            <button onClick={medSearch} type="submit">Search</button>
+            <tr>
+              <td>
+                <label htmlFor="search">Medication Name </label>
+              </td>
+              <td>
+                <input type="text" id="search" name="search" onChange={event => setMedName(event.target.value)}/>            
+              </td>
+              <td>
+                <button class="formButton" onClick={medSearch} type="submit">Search</button>
+              </td>
+            </tr>
+          </table>
 
         {list.map(item => 
           <ListItem className='medication' 
