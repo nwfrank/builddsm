@@ -8,11 +8,17 @@ function App() {
   
   const [medName, setMedName] = useState('');
   const [list, setList] = useState([]);
-
+  const [lookupNum, setLookupNum] = useState('');
 
   const medSearch = () => {
-    const result = data.filter((o) => o.proprietaryName.toLowerCase().includes(medName.toLowerCase()));
-    setList(result);
+    const result = data.filter((o) => o.applicationNumber.toLowerCase().includes(lookupNum.toLowerCase()));
+    if (result.length > 0 && lookupNum.length == 7){
+      setList(result);
+    }
+    else{
+      const result2 = data.filter((o) => o.proprietaryName.toLowerCase().includes(medName.toLowerCase()));
+      setList(result2);
+    }
   }
 
   return (
@@ -22,8 +28,7 @@ function App() {
         <p>The expert on everything veterinary pharmacy.</p>
 
             <label htmlFor="search">Lookup Number </label>
-            <input type="text" id="search" autoFocus name="search"/>
-            <button type="submit">Search</button>
+            <input onChange={event => setLookupNum(event.target.value)} type="text" id="search" autoFocus name="search"/>
 
 
             <label htmlFor="search">Medication Name </label>
@@ -31,8 +36,16 @@ function App() {
             <button onClick={medSearch} type="submit">Search</button>
 
         {list.map(item => 
-          <ListItem className='medication' commonNames={item.proprietaryName} 
-          activeIng={item.ingredients} indicators={item.indications} pdf={item.bblabelId}/>
+          <ListItem className='medication' 
+            commonNames={item.proprietaryName} 
+            activeIng={item.ingredients} 
+            indicators={item.indications} 
+            pdf={item.bblabelId}
+            applicationNumber={item.applicationNumber}
+            animalClass={item.animalclass}
+            status={item.status}
+            labelType={item.labelType}
+            />
         )}  
       </header>
     </div>
