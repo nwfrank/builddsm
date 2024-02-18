@@ -6,7 +6,6 @@ import './components/splitScreen.css';
 
 function App() {
 
-  
   const [medName, setMedName] = useState('');
   const [list, setList] = useState([]);
   const [lookupNum, setLookupNum] = useState('');
@@ -14,7 +13,9 @@ function App() {
   const [rightScreen, setRightScreen] = useState('none');
 
   const medSearch = () => {
+    // eslint-disable-next-line
     const result = data.filter((o) => o.bblabelId == lookupNum);
+    // eslint-disable-next-line
     if (result.length > 0 && (lookupNum.length == 3 || lookupNum.length == 4)){
       setList(result);
     }
@@ -28,6 +29,7 @@ function App() {
   }
 
   const open = () => {
+    // eslint-disable-next-line
     if(rightScreen == 'none'){
       setLeftScreen('33%');
       setRightScreen('block');
@@ -91,5 +93,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

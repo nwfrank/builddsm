@@ -1,8 +1,16 @@
 .asdf{
-    color: red;
+    color: rgb(34, 0, 0);
 }
 
 .item-holder {
     background-color: white;
-    border: solid 1px black;
+    border: solid 2px black;
+}
+
+p {
+    margin-left: 10px;
+}
+
+button {
+    margin-left: 10px;
 }

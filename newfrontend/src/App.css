@@ -25,10 +25,22 @@ button {
   margin-bottom: 10px;
 }
 
+.but {
+  background-color: aqua;
+  margin-top: 66.9vh;
+  margin-left: 4vh;
+  padding: 3vh;
+}
+
 input {
   margin-bottom: 10px;
 }
 
 label {
+<<<<<<< Updated upstream
   margin: 10px;
 }
+=======
+  margin: 20px;
+}
+>>>>>>> Stashed changes
