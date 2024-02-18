@@ -12,7 +12,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.dataEntry {
+  position: fixed;
+  background-color: #FAF8FB;
+  padding-right: 50vh;
+}
+.ListContent {
+  padding-top: 30vh;
+}
 button {
   margin-left: 20px;
   margin-bottom: 10px;
@@ -23,5 +30,5 @@ input {
 }
 
 label {
-  margin: 20px;
+  margin: 10px;
 }
