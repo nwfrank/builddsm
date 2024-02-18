@@ -2,14 +2,13 @@
     display: flex;
     flex-direction: row;
     min-height: 37rem; /* Ensure full height of the screen */
-    background-color: #FAF8FB;
+    
   }
   
   .split-left {
     display: flex;
     align-items: top;
     justify-content: left;
-    background-color: #d7d5d5;
   }
 
   .but {
@@ -36,6 +35,8 @@
     align-items: top;
     justify-content: left;
     padding-left: 3rem;
+    background-color: #FAF8FB;
+    min-height: 100vh;
   }
 
   .login-card {
