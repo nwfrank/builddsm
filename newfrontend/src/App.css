@@ -25,6 +25,10 @@ button {
   margin-bottom: 10px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .but {
   position: fixed;
   background-color: aqua;
