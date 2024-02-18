@@ -26,6 +26,7 @@ button {
 }
 
 .but {
+  position: fixed;
   background-color: aqua;
   margin-top: 66.9vh;
   margin-left: 4vh;
@@ -37,10 +38,5 @@ input {
 }
 
 label {
-<<<<<<< Updated upstream
   margin: 10px;
 }
-=======
-  margin: 20px;
-}
->>>>>>> Stashed changes
