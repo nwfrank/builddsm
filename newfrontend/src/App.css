@@ -13,13 +13,15 @@
   color: white;
 }
 
-.ghgh {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+button {
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-.split {
-  min-width: 50%;
+input {
+  margin-bottom: 10px;
 }
 
+label {
+  margin: 20px;
+}

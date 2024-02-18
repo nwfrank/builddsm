@@ -49,14 +49,28 @@ function App() {
             <div className='spilt'>
          <h1>Farm-aceutical Fix</h1>
          <p>The expert on everything veterinary pharmacy.</p>
+        <table>
+            <tr>
+              <td>
+                <label htmlFor="search">Lookup Number </label>
+              </td>
+              <td>
+                <input type="text" id="search" autoFocus name="search" onChange={event => setLookupNum(event.target.value)}/>
+              </td>
+            </tr>
 
-             <label htmlFor="search">Lookup Number </label>
-             <input onChange={event => setLookupNum(event.target.value)} type="text" id="search" autoFocus name="search"/>
-
-
-             <label htmlFor="search">Medication Name </label>
-             <input type="text" id="search" name="search" onChange={event => setMedName(event.target.value)}/>
-             <button onClick={medSearch} type="submit">Search</button>
+            <tr>
+              <td>
+                <label htmlFor="search">Medication Name </label>
+              </td>
+              <td>
+                <input type="text" id="search" name="search" onChange={event => setMedName(event.target.value)}/>            
+              </td>
+              <td>
+                <button class="formButton" onClick={medSearch} type="submit">Search</button>
+              </td>
+            </tr>
+          </table>
 
          {list.map(item => 
            <ListItem className='medication' 
@@ -75,38 +89,6 @@ function App() {
         </div>
       </div>
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <div className='ghgh'>
-    //     <div className='spilt'>text</div>
-    //     <div className='spilt'>
-    //     <h1>Farm-aceutical Fix</h1>
-    //     <p>The expert on everything veterinary pharmacy.</p>
-
-    //         <label htmlFor="search">Lookup Number </label>
-    //         <input onChange={event => setLookupNum(event.target.value)} type="text" id="search" autoFocus name="search"/>
-
-
-    //         <label htmlFor="search">Medication Name </label>
-    //         <input type="text" id="search" name="search" onChange={event => setMedName(event.target.value)}/>
-    //         <button onClick={medSearch} type="submit">Search</button>
-
-    //     {list.map(item => 
-    //       <ListItem className='medication' 
-    //         commonNames={item.proprietaryName} 
-    //         activeIng={item.ingredients} 
-    //         indicators={item.indications} 
-    //         pdf={item.bblabelId}
-    //         applicationNumber={item.applicationNumber}
-    //         animalClass={item.animalclass}
-    //         status={item.status}
-    //         labelType={item.labelType}
-    //         />
-    //     )}  
-    //     </div>
-    //     </div>
-    //   </header>
-    // </div>
   );
 }
 
